@@ -10,7 +10,7 @@ import { DiscountRequest, DiscountResponse } from '../models/cart.model';
 })
 export class ApiService {
   private http = inject(HttpClient);
-  private baseUrl = 'https://skien-assignment-1.onrender.com//api';
+  private baseUrl = 'https://skien-assignment-1.onrender.com/api';
 
   login(email: string, password: string): Observable<LoginResponse> {
     return this.http.post<LoginResponse>(`${this.baseUrl}/login`, { email, password });
